@@ -1,4 +1,4 @@
-PetalburgCity_EventScript_FocusBlastTutor::
+OldaleTown_EventScript_FocusBlastTutor::
 	lock
 	faceplayer
 	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_FOCUS_BLAST, MoveTutor_EventScript_FocusBlastTaught

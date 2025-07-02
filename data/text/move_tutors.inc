@@ -4,13 +4,13 @@ MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce:
 
 MoveTutor_Text_FocusBlastTeach:
 	.string "Whoa, hang on, dude. This move?\n"
-	.string "It’s all about chillin’ your mind and\n"
-	.string "blastin’ at just the right time.\l"
-	.string "You can’t just hurl it and hope,\l"
+	.string "It’s all about chillin’ your mind and\l"
+	.string "blastin’ at just the right time.\p"
+	.string "You can’t just hurl it and hope,\n"
 	.string "it takes focus, y’know?\p"
-	.string "Miss, and it’s a total wipeout.\l"
-	.string "Land it, though... and boom--gnarly\l"
-	.string "impact.\p"
+	.string "Miss, and it’s a total wipeout.\n"
+	.string "Land it, though... and boom--\l"
+	.string "gnarly impact.\p"
 	.string "You down to ride this wave?$"
 
 MoveTutor_Text_FocusBlastDeclined:
