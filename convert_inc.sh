@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for directory in data/maps/* ; do
 	pory_exists=$(find $directory -name $"scripts.pory" | wc -l)
 	if [[ $pory_exists -eq 0 ]]; 
