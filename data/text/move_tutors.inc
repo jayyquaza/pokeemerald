@@ -2,6 +2,31 @@ MoveTutor_Text_ThisMoveCanOnlyBeLearnedOnce:
 	.string "This move can be learned only\n"
 	.string "once. Is that okay?$"
 
+MoveTutor_Text_FocusBlastTeach:
+	.string "Whoa, hang on, dude. This move?\n"
+	.string "It’s all about chillin’ your mind and\n"
+	.string "blastin’ at just the right time.\l"
+	.string "You can’t just hurl it and hope,\l"
+	.string "it takes focus, y’know?\p"
+	.string "Miss, and it’s a total wipeout.\l"
+	.string "Land it, though... and boom--gnarly\l"
+	.string "impact.\p"
+	.string "You down to ride this wave?$"
+
+MoveTutor_Text_FocusBlastDeclined:
+	.string "No worries, bro. Come back when you’re\n"
+	.string "more in sync with the vibes.$"
+
+MoveTutor_Text_FocusBlastWhichMon:
+	.string "Heck yeah! Let’s ride.\n"
+	.string "Deep breath, center up. We’re teachin’\n"
+	.string "your buddy now.$"
+
+MoveTutor_Text_FocusBlastTaught:
+	.string "Righteous! Your Pokémon’s set. Laser\n"
+	.string "focus. Big energy. Just don’t go flingin’\l"
+	.string "it wild.$"
+
 MoveTutor_Text_SwaggerTeach:
 	.string "Heh! My POKéMON totally rules!\n"
 	.string "It's cooler than any POKéMON!\p"

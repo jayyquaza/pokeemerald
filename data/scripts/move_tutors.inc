@@ -1,4 +1,30 @@
-SlateportCity_PokemonFanClub_EventScript_SwaggerTutor::
+PetalburgCity_EventScript_SwaggerTutor::
+	lock
+	faceplayer
+	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_FOCUS_BLAST, MoveTutor_EventScript_FocusBlastTaught
+	msgbox MoveTutor_Text_FocusBlastTeach, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_FocusBlastrDeclined
+	call MoveTutor_EventScript_CanOnlyBeLearnedOnce
+	goto_if_eq VAR_RESULT, NO, MoveTutor_EventScript_FocusBlastDeclined
+	msgbox MoveTutor_Text_FocusBlastWhichMon, MSGBOX_DEFAULT
+	setvar VAR_0x8005, MOVE_FOCUS_BLAST
+	call MoveTutor_EventScript_OpenPartyMenu
+	goto_if_eq VAR_RESULT, 0, MoveTutor_EventScript_FocusBlastDeclined
+	setflag FLAG_MOVE_TUTOR_TAUGHT_FOCUS_BLAST
+	goto MoveTutor_EventScript_FocusBlastTaught
+	end
+
+MoveTutor_EventScript_FocusBlastDeclined::
+	msgbox MoveTutor_Text_FocusBlastDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MoveTutor_EventScript_FocusBlastTaught::
+	msgbox MoveTutor_Text_FocusBlastTaught, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_PokemonFanClub_EventScript_FocusBlastTutor::
 	lock
 	faceplayer
 	goto_if_set FLAG_MOVE_TUTOR_TAUGHT_SWAGGER, MoveTutor_EventScript_SwaggerTaught
