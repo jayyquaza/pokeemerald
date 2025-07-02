@@ -1040,6 +1040,7 @@ static const u16 sRaichuAlolaTeachableLearnset[] = {
     MOVE_DOUBLE_TEAM,
     MOVE_ENDURE,
     MOVE_FACADE,
+    MOVE_FOCUS_BLAST,
     MOVE_FOCUS_PUNCH,
     MOVE_HYPER_BEAM,
     MOVE_IRON_TAIL,
