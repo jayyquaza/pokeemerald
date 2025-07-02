@@ -24440,7 +24440,7 @@ F_TRAINER_FEMALE |
 #line 9781
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9782
-        .trainerPic = TRAINER_PIC_LEADER_KAI,
+        .trainerPic = TRAINER_PIC_LEADER_JAXON,
         .encounterMusic_gender =
 #line 9783
 F_TRAINER_FEMALE | 

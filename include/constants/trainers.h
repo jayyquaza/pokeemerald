@@ -126,7 +126,6 @@
 #define TRAINER_PIC_UMBRA_ADMIN_VOSS      107
 #define TRAINER_PIC_UMBRA_ADMIN_ROOK      108
 #define TRAINER_PIC_UMBRA_LEADER_SOLEN    109
-
 #define TRAINER_PIC_AIDEN                 110
 #define TRAINER_PIC_BLAIR                 111
 #define TRAINER_PIC_RIVEN                 112
