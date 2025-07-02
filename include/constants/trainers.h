@@ -108,7 +108,30 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
-#define TRAINER_PIC_COUNT                 93
+
+#define TRAINER_PIC_LEADER_LENA           93
+#define TRAINER_PIC_LEADER_PETRA          94
+#define TRAINER_PIC_LEADER_BENNY          95
+#define TRAINER_PIC_LEADER_JAXON          96
+#define TRAINER_PIC_LEADER_DAHLIA         97
+#define TRAINER_PIC_LEADER_KAI            98
+#define TRAINER_PIC_LEADER_KAEL           99
+#define TRAINER_PIC_LEADER_SARAH          100
+#define TRAINER_PIC_ELITE_FOUR_SORA       101
+#define TRAINER_PIC_ELITE_FOUR_CASSIAN    102
+#define TRAINER_PIC_ELITE_FOUR_ELIRA      103
+#define TRAINER_PIC_ELITE_FOUR_JAY        104
+#define TRAINER_PIC_CHAMPION_NOVA         105
+#define TRAINER_PIC_UMBRA_ADMIN_NYRA      106
+#define TRAINER_PIC_UMBRA_ADMIN_VOSS      107
+#define TRAINER_PIC_UMBRA_ADMIN_ROOK      108
+#define TRAINER_PIC_UMBRA_LEADER_SOLEN    109
+
+#define TRAINER_PIC_AIDEN                 110
+#define TRAINER_PIC_BLAIR                 111
+#define TRAINER_PIC_RIVEN                 112
+
+#define TRAINER_PIC_COUNT                 113
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
