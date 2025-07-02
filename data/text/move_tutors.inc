@@ -19,7 +19,7 @@ MoveTutor_Text_FocusBlastDeclined:
 
 MoveTutor_Text_FocusBlastWhichMon:
 	.string "Heck yeah! Let’s ride.\n"
-	.string "Deep breath, center up. We’re teachin’\n"
+	.string "Deep breath, center up. We’re teachin’\l"
 	.string "your buddy now.$"
 
 MoveTutor_Text_FocusBlastTaught:

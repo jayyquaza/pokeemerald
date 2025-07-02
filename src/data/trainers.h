@@ -24440,7 +24440,7 @@ F_TRAINER_FEMALE |
 #line 9781
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 9782
-        .trainerPic = TRAINER_PIC_MAY,
+        .trainerPic = TRAINER_PIC_LEADER_KAI,
         .encounterMusic_gender =
 #line 9783
 F_TRAINER_FEMALE | 
@@ -24455,7 +24455,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 9788
-            .species = SPECIES_MUDKIP,
+            .species = SPECIES_BUIZEL,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 9790
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
