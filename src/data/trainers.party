@@ -9778,12 +9778,13 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MAY_ROUTE_103_TORCHIC ===
 Name: MAY
-Class: Rival
-Pic: Leader Petra
+Class: Leader 
+Pic: Leader Sarah
 Gender: Female
-Music: Female
+Music: Female 
 Double Battle: No
 AI: Basic Trainer
+Mugshot: Pink
 
 Buizel
 Level: 5

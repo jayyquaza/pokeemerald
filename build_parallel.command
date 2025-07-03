@@ -16,3 +16,5 @@ nproc=$(sysctl -n hw.ncpu)
 make -j$nproc
 
 open pokeemerald.gba
+
+exit 
