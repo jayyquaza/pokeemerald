@@ -17,4 +17,3 @@ make -j$nproc
 
 open pokeemerald.gba
 
-exit 
