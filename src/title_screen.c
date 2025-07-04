@@ -62,6 +62,10 @@ static const u16 sUnusedUnknownPal[] = INCBIN_U16("graphics/title_screen/unused.
 
 static const u32 sTitleScreenRayquazaGfx[] = INCBIN_U32("graphics/title_screen/rayquaza.4bpp.lz");
 static const u32 sTitleScreenRayquazaTilemap[] = INCBIN_U32("graphics/title_screen/rayquaza.bin.lz");
+static const u32 sTitleScreenLatiosGfx[] = INCBIN_U32("graphics/title_screen/latios.4bpp.lz");
+static const u32 sTitleScreenLatiosTilemap[] = INCBIN_U32("graphics/title_screen/latios.bin.lz");
+static const u32 sTitleScreenLatiasGfx[] = INCBIN_U32("graphics/title_screen/latias.4bpp.lz");
+static const u32 sTitleScreenLatiasTilemap[] = INCBIN_U32("graphics/title_screen/latias.bin.lz");
 static const u32 sTitleScreenLogoShineGfx[] = INCBIN_U32("graphics/title_screen/logo_shine.4bpp.lz");
 static const u32 sTitleScreenCloudsGfx[] = INCBIN_U32("graphics/title_screen/clouds.4bpp.lz");
 
@@ -564,7 +568,7 @@ static void VBlankCB(void)
     LoadOam();
     ProcessSpriteCopyRequests();
     TransferPlttBuffer();
-    SetGpuReg(REG_OFFSET_BG1VOFS, gBattle_BG1_Y);
+    // SetGpuReg(REG_OFFSET_BG1VOFS, gBattle_BG1_Y);
 }
 
 void CB2_InitTitleScreen(void)
@@ -598,13 +602,21 @@ void CB2_InitTitleScreen(void)
         // bg2
         LZ77UnCompVram(gTitleScreenPokemonLogoGfx, (void *)(BG_CHAR_ADDR(0)));
         LZ77UnCompVram(gTitleScreenPokemonLogoTilemap, (void *)(BG_SCREEN_ADDR(9)));
-        LoadPalette(gTitleScreenBgPalettes, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
         // bg3
-        LZ77UnCompVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));
-        LZ77UnCompVram(sTitleScreenRayquazaTilemap, (void *)(BG_SCREEN_ADDR(26)));
+        // if (Random() % 2 == 0)
+        // {
+            LoadPalette(gTitleScreenBgPalettesLatios, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
+            LZ77UnCompVram(sTitleScreenLatiosGfx, (void *)(BG_CHAR_ADDR(2)));
+            LZ77UnCompVram(sTitleScreenLatiosTilemap, (void *)(BG_SCREEN_ADDR(26)));
+        // } else {
+        //     LoadPalette(gTitleScreenBgPalettesLatias, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
+        //     LZ77UnCompVram(sTitleScreenLatiasGfx, (void *)(BG_CHAR_ADDR(2)));
+        //     LZ77UnCompVram(sTitleScreenLatiasTilemap, (void *)(BG_SCREEN_ADDR(26)));
+        // }
+        
         // bg1
-        LZ77UnCompVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
-        LZ77UnCompVram(gTitleScreenCloudsTilemap, (void *)(BG_SCREEN_ADDR(27)));
+        // LZ77UnCompVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
+        // LZ77UnCompVram(gTitleScreenCloudsTilemap, (void *)(BG_SCREEN_ADDR(27)));
         ScanlineEffect_Stop();
         ResetTasks();
         ResetSpriteData();
@@ -649,7 +661,7 @@ void CB2_InitTitleScreen(void)
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_BLDY, 12);
         SetGpuReg(REG_OFFSET_BG0CNT, BGCNT_PRIORITY(3) | BGCNT_CHARBASE(2) | BGCNT_SCREENBASE(26) | BGCNT_16COLOR | BGCNT_TXT256x256);
-        SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(3) | BGCNT_SCREENBASE(27) | BGCNT_16COLOR | BGCNT_TXT256x256);
+        // SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(2) | BGCNT_CHARBASE(3) | BGCNT_SCREENBASE(27) | BGCNT_16COLOR | BGCNT_TXT256x256);
         SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(1) | BGCNT_CHARBASE(0) | BGCNT_SCREENBASE(9) | BGCNT_256COLOR | BGCNT_AFF256x256);
         EnableInterrupts(INTR_FLAG_VBLANK);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1
@@ -665,7 +677,7 @@ void CB2_InitTitleScreen(void)
         if (!UpdatePaletteFade())
         {
             StartPokemonLogoShine(SHINE_MODE_SINGLE_NO_BG_COLOR);
-            ScanlineEffect_InitWave(0, DISPLAY_HEIGHT, 4, 4, 0, SCANLINE_EFFECT_REG_BG1HOFS, TRUE);
+            // ScanlineEffect_InitWave(0, DISPLAY_HEIGHT, 4, 4, 0, SCANLINE_EFFECT_REG_BG1HOFS, TRUE);
             SetMainCallback2(MainCB2);
         }
         break;
@@ -812,7 +824,7 @@ static void Task_TitleScreenPhase3(u8 taskId)
             gBattle_BG1_Y = gTasks[taskId].tBg1Y / 2;
             gBattle_BG1_X = 0;
         }
-        UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
+        // UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
         if ((gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
             BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_WHITEALPHA);
@@ -854,16 +866,16 @@ static void CB2_GoToBerryFixScreen(void)
     }
 }
 
-static void UpdateLegendaryMarkingColor(u8 frameNum)
-{
-    if ((frameNum % 4) == 0) // Change color every 4th frame
-    {
-        s32 intensity = Cos(frameNum, 128) + 128;
-        s32 r = 31 - ((intensity * 32 - intensity) / 256);
-        s32 g = 31 - (intensity * 22 / 256);
-        s32 b = 12;
+// static void UpdateLegendaryMarkingColor(u8 frameNum)
+// {
+//     if ((frameNum % 4) == 0) // Change color every 4th frame
+//     {
+//         s32 intensity = Cos(frameNum, 128) + 128;
+//         s32 r = 31 - ((intensity * 32 - intensity) / 256);
+//         s32 g = 31 - (intensity * 22 / 256);
+//         s32 b = 12;
 
-        u16 color = RGB(r, g, b);
-        LoadPalette(&color, BG_PLTT_ID(14) + 15, sizeof(color));
-   }
-}
+//         u16 color = RGB(r, g, b);
+//         LoadPalette(&color, BG_PLTT_ID(14) + 15, sizeof(color));
+//    }
+// }
