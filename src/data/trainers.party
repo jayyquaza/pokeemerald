@@ -9778,13 +9778,13 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MAY_ROUTE_103_TORCHIC ===
 Name: MAY
-Class: Elite Four 
-Pic: Elite Four Jay
-Gender: Male
-Music: Elite Four 
+Class: Rival 
+Pic: Leader Kai
+Gender: Female
+Music: Female
 Double Battle: No
 AI: Basic Trainer
-Mugshot: Blue
+Mugshot: Red
 
 Buizel
 Level: 5

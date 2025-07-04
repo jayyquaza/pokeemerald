@@ -330,8 +330,8 @@ const u16 gTrainerPalette_EliteFourElira[] = INCBIN_U16("graphics/trainers/palet
 const u32 gTrainerFrontPic_EliteFourJay[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_jay.4bpp.lz");
 const u16 gTrainerPalette_EliteFourJay[] = INCBIN_U16("graphics/trainers/palettes/elite_four_jay.gbapal");
 
-// const u32 gTrainerFrontPic_ChampionNova[] = INCBIN_U32("graphics/trainers/front_pics/champion_nova.4bpp.lz");
-// const u16 gTrainerPalette_ChampionNova[] = INCBIN_U16("graphics/trainers/palettes/champion_nova.gbapal");
+const u32 gTrainerFrontPic_ChampionNova[] = INCBIN_U32("graphics/trainers/front_pics/champion_nova.4bpp.lz");
+const u16 gTrainerPalette_ChampionNova[] = INCBIN_U16("graphics/trainers/palettes/champion_nova.gbapal");
 
 // const u32 gTrainerFrontPic_UmbraAdminNyra[] = INCBIN_U32("graphics/trainers/front_pics/umbra_admin_nyra.4bpp.lz");
 // const u16 gTrainerPalette_UmbraAdminNyra[] = INCBIN_U16("graphics/trainers/palettes/umbra_admin_nyra.gbapal");
@@ -469,16 +469,16 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_LEADER_LENA, gTrainerFrontPic_LeaderLena, gTrainerPalette_LeaderLena),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_PETRA, gTrainerFrontPic_LeaderPetra, gTrainerPalette_LeaderPetra),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_BENNY, gTrainerFrontPic_LeaderBenny, gTrainerPalette_LeaderBenny), 
-    TRAINER_SPRITE(TRAINER_PIC_LEADER_JAXON, gTrainerFrontPic_LeaderJaxon, gTrainerPalette_LeaderJaxon),
-    TRAINER_SPRITE(TRAINER_PIC_LEADER_DAHLIA, gTrainerFrontPic_LeaderDahlia, gTrainerPalette_LeaderDahlia),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_JAXON, gTrainerFrontPic_LeaderJaxon, gTrainerPalette_LeaderJaxon, -18),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_DAHLIA, gTrainerFrontPic_LeaderDahlia, gTrainerPalette_LeaderDahlia, -6),
     TRAINER_SPRITE(TRAINER_PIC_LEADER_KAI, gTrainerFrontPic_LeaderKai, gTrainerPalette_LeaderKai),
-    TRAINER_SPRITE(TRAINER_PIC_LEADER_KAEL, gTrainerFrontPic_LeaderKael, gTrainerPalette_LeaderKael),
-    TRAINER_SPRITE(TRAINER_PIC_LEADER_SARAH, gTrainerFrontPic_LeaderSarah, gTrainerPalette_LeaderSarah),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_KAEL, gTrainerFrontPic_LeaderKael, gTrainerPalette_LeaderKael, -10),
+    TRAINER_SPRITE(TRAINER_PIC_LEADER_SARAH, gTrainerFrontPic_LeaderSarah, gTrainerPalette_LeaderSarah, -24),
     // TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_SORA, gTrainerFrontPic_EliteFourSora, gTrainerPalette_EliteFourSora),
     // TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_CASSIAN, gTrainerFrontPic_EliteFourCassian, gTrainerPalette_EliteFourCassian),
     TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_ELIRA, gTrainerFrontPic_EliteFourElira, gTrainerPalette_EliteFourElira),
     TRAINER_SPRITE(TRAINER_PIC_ELITE_FOUR_JAY, gTrainerFrontPic_EliteFourJay, gTrainerPalette_EliteFourJay),
-    // TRAINER_SPRITE(TRAINER_PIC_CHAMPION_NOVA, gTrainerFrontPic_ChampionNova, gTrainerPalette_ChampionNova),
+    TRAINER_SPRITE(TRAINER_PIC_CHAMPION_NOVA, gTrainerFrontPic_ChampionNova, gTrainerPalette_ChampionNova, -20),
     // TRAINER_SPRITE(TRAINER_PIC_UMBRA_ADMIN_NYRA, gTrainerFrontPic_UmbraAdminNyra, gTrainerPalette_UmbraAdminNyra),
     // TRAINER_SPRITE(TRAINER_PIC_UMBRA_ADMIN_VOSS, gTrainerFrontPic_UmbraAdminVoss, gTrainerPalette_UmbraAdminVoss),
     // TRAINER_SPRITE(TRAINER_PIC_UMBRA_ADMIN_ROOK, gTrainerFrontPic_UmbraAdminRook, gTrainerPalette_UmbraAdminRook),
