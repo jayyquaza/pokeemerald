@@ -24438,20 +24438,18 @@ F_TRAINER_FEMALE |
 #line 9780
         .trainerName = _("MAY"),
 #line 9781
-        .trainerClass = TRAINER_CLASS_LEADER,
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
 #line 9782
-        .trainerPic = TRAINER_PIC_LEADER_SARAH,
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_JAY,
         .encounterMusic_gender =
-#line 9783
-F_TRAINER_FEMALE | 
 #line 9784
-            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+            TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
 #line 9785
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 9786
         .aiFlags = AI_FLAG_BASIC_TRAINER,
 #line 9787
-        .mugshotColor = MUGSHOT_COLOR_PINK,
+        .mugshotColor = MUGSHOT_COLOR_BLUE,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
