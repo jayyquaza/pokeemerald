@@ -603,16 +603,16 @@ void CB2_InitTitleScreen(void)
         LZ77UnCompVram(gTitleScreenPokemonLogoGfx, (void *)(BG_CHAR_ADDR(0)));
         LZ77UnCompVram(gTitleScreenPokemonLogoTilemap, (void *)(BG_SCREEN_ADDR(9)));
         // bg3
-        // if (Random() % 2 == 0)
-        // {
+        if (Random() % 2 == 0)
+        {
             LoadPalette(gTitleScreenBgPalettesLatios, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
             LZ77UnCompVram(sTitleScreenLatiosGfx, (void *)(BG_CHAR_ADDR(2)));
             LZ77UnCompVram(sTitleScreenLatiosTilemap, (void *)(BG_SCREEN_ADDR(26)));
-        // } else {
-        //     LoadPalette(gTitleScreenBgPalettesLatias, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
-        //     LZ77UnCompVram(sTitleScreenLatiasGfx, (void *)(BG_CHAR_ADDR(2)));
-        //     LZ77UnCompVram(sTitleScreenLatiasTilemap, (void *)(BG_SCREEN_ADDR(26)));
-        // }
+        } else {
+            LoadPalette(gTitleScreenBgPalettesLatias, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
+            LZ77UnCompVram(sTitleScreenLatiasGfx, (void *)(BG_CHAR_ADDR(2)));
+            LZ77UnCompVram(sTitleScreenLatiasTilemap, (void *)(BG_SCREEN_ADDR(26)));
+        }
         
         // bg1
         // LZ77UnCompVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
